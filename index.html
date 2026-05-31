@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rytinė apranga</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero" aria-labelledby="app-title">
+        <div>
+          <p class="eyebrow">Labas rytas!</p>
+          <h1 id="app-title">Ką šiandien rengsiesi?</h1>
+          <p class="intro">
+            Pasirink orą ir drabužius. Kai viskas paruošta, gausi savo rytinį
+            aprangos planą.
+          </p>
+        </div>
+        <div class="mascot" aria-hidden="true">
+          <span class="sun">☀</span>
+          <span class="hanger">⌒</span>
+          <span class="shirt">👕</span>
+        </div>
+      </section>
+
+      <section class="panel weather-panel" aria-labelledby="weather-title">
+        <div class="section-heading">
+          <span class="step">1</span>
+          <h2 id="weather-title">Koks šiandien oras?</h2>
+        </div>
+        <div class="choice-grid" data-group="weather">
+          <button class="choice selected" type="button" data-value="saulėta" data-tip="Lengvesni drabužiai">
+            <span class="choice-icon">☀️</span>
+            Saulėta
+          </button>
+          <button class="choice" type="button" data-value="vėsu" data-tip="Pravers džemperis">
+            <span class="choice-icon">🌤️</span>
+            Vėsu
+          </button>
+          <button class="choice" type="button" data-value="lietus" data-tip="Nepamiršk striukės">
+            <span class="choice-icon">🌧️</span>
+            Lietus
+          </button>
+          <button class="choice" type="button" data-value="šalta" data-tip="Rinkis šiltai">
+            <span class="choice-icon">❄️</span>
+            Šalta
+          </button>
+        </div>
+      </section>
+
+      <section class="closet-layout">
+        <div class="panel closet" aria-labelledby="closet-title">
+          <div class="section-heading">
+            <span class="step">2</span>
+            <h2 id="closet-title">Išsirink drabužius</h2>
+          </div>
+
+          <div class="category" data-category="Viršus">
+            <h3>Viršus</h3>
+            <div class="item-row">
+              <button class="item selected" type="button" data-value="marškinėliai" data-emoji="👕">👕 Marškinėliai</button>
+              <button class="item" type="button" data-value="megztinis" data-emoji="🧥">🧥 Megztinis</button>
+              <button class="item" type="button" data-value="suknelė" data-emoji="👗">👗 Suknelė</button>
+            </div>
+          </div>
+
+          <div class="category" data-category="Apačia">
+            <h3>Apačia</h3>
+            <div class="item-row">
+              <button class="item selected" type="button" data-value="kelnės" data-emoji="👖">👖 Kelnės</button>
+              <button class="item" type="button" data-value="šortai" data-emoji="🩳">🩳 Šortai</button>
+              <button class="item" type="button" data-value="sijonas" data-emoji="🧵">🧵 Sijonas</button>
+            </div>
+          </div>
+
+          <div class="category" data-category="Avalynė">
+            <h3>Avalynė</h3>
+            <div class="item-row">
+              <button class="item selected" type="button" data-value="sportbačiai" data-emoji="👟">👟 Sportbačiai</button>
+              <button class="item" type="button" data-value="botai" data-emoji="🥾">🥾 Botai</button>
+              <button class="item" type="button" data-value="basutės" data-emoji="🩴">🩴 Basutės</button>
+            </div>
+          </div>
+
+          <div class="category" data-category="Priedas">
+            <h3>Priedas</h3>
+            <div class="item-row">
+              <button class="item selected" type="button" data-value="kepurė" data-emoji="🧢">🧢 Kepurė</button>
+              <button class="item" type="button" data-value="skėtis" data-emoji="☂️">☂️ Skėtis</button>
+              <button class="item" type="button" data-value="šalikas" data-emoji="🧣">🧣 Šalikas</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel outfit-card" aria-labelledby="summary-title">
+          <div class="section-heading">
+            <span class="step">3</span>
+            <h2 id="summary-title">Mano planas</h2>
+          </div>
+
+          <div class="kid-preview" aria-hidden="true">
+            <div class="head"></div>
+            <div class="body" id="preview-top">👕</div>
+            <div class="legs" id="preview-bottom">👖</div>
+            <div class="shoes" id="preview-shoes">👟</div>
+          </div>
+
+          <ul class="summary-list" id="summary-list"></ul>
+          <p class="weather-note" id="weather-note"></p>
+
+          <div class="actions">
+            <button class="primary-button" type="button" id="ready-button">Aš pasiruošęs!</button>
+            <button class="secondary-button" type="button" id="random-button">Nustebink mane</button>
+          </div>
+
+          <p class="result" id="result" role="status" aria-live="polite"></p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
